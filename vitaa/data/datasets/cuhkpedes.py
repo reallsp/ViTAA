@@ -8,7 +8,7 @@ from PIL import Image
 from vitaa.utils.caption import Caption
 
 
-class CUHKPEDESDataset(data.Dataset):
+class CUHKPEDESDataset(data.Dataset):#制造数据集
     def __init__(self,
                  root,
                  ann_file,
@@ -80,5 +80,5 @@ class CUHKPEDESDataset(data.Dataset):
         pid = self.dataset['annotations'][index]['id']
         return image_id, pid
 
-
+#数据集caption包括onehot,img_path,mask,attribute,label等变量
 
